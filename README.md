@@ -21,11 +21,6 @@ Email Spam Report is a front-end application that enables users to submit and re
 
 ## Getting started
 
-### Prerequisites
-
-- Node.js (v16 or later recommended)
-- npm (or yarn / pnpm)
-
 ### Clone and run
 
 1. Clone the repository
