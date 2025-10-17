@@ -1,22 +1,99 @@
-
 # Email Spam Report
 
-A lightweight React + TypeScript app for reporting and analyzing email spam. This repository contains the frontend code used to collect, display, and manage spam reports.
+Email Spam Report is a front-end application that enables users to submit and review reports of spam emails. The UI emphasizes clarity and fast feedback for investigators and users who want to flag suspicious messages. It is intentionally modular and easy to extend or integrate with backend services or APIs for persistence, analytics, or automation.
 
-Maintained and owned by Vinay-014.
+## Key features
 
-Quick start
-- Clone the repo
-  git clone <YOUR_GIT_URL>
-- Install dependencies
-  npm install
-- Run development server
-  npm run dev
+- Responsive React + TypeScript UI
+- Fast development powered by Vite
+- Tailwind CSS for utility-first styling
+- shadcn-ui primitives for consistent UI components
+- Easily pluggable data layer (API or local persistence)
+- Lightweight and optimized for rapid iteration
 
-Tech stack
+## Tech stack
+
 - Vite
-- TypeScript
 - React
+- TypeScript
 - Tailwind CSS
 - shadcn-ui
 
+## Getting started
+
+### Prerequisites
+
+- Node.js (v16 or later recommended)
+- npm (or yarn / pnpm)
+
+### Clone and run
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/Vinay-014/email-spam-report.git
+   cd email-spam-report
+   ```
+
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+
+3. Start the development server
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production
+   ```bash
+   npm run build
+   ```
+
+5. Preview production build
+   ```bash
+   npm run preview
+   ```
+
+Adjust the package manager commands (yarn / pnpm) if you prefer an alternative.
+
+## Project structure
+
+A typical layout:
+
+- public/                — Static assets
+- src/
+  - components/          — Reusable React components
+  - pages/               — Route-level components
+  - styles/              — Tailwind / CSS entrypoints
+  - utils/               — Shared utilities and helpers
+  - main.tsx             — App bootstrap
+- index.html
+- package.json
+- vite.config.ts
+
+(This is a suggested structure — adapt to your conventions as the project evolves.)
+
+## Scripts
+
+Common scripts found in package.json (may vary):
+
+- npm run dev — Start the dev server
+- npm run build — Build production assets
+- npm run preview — Preview production build locally
+- npm run lint — Run linting (if configured)
+- npm run test — Run tests (if configured)
+
+## Configuration
+
+- Tailwind is typically configured via tailwind.config.cjs.
+- Vite configuration lives in vite.config.ts.
+- If the app integrates with a backend API, supply API endpoints and credentials via environment variables (e.g., `.env.local`). Example:
+  ```
+  VITE_API_BASE_URL=https://api.example.com
+  ```
+
+Document any required environment variables and secrets clearly in a dedicated `.env.example`.
+
+## Acknowledgements
+
+Built with the Vite + React + TypeScript ecosystem and UI primitives from shadcn-ui. Tailwind CSS provides the styling foundation.
