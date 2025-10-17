@@ -81,26 +81,31 @@ const Dashboard = () => {
     setIsCreatingTest(true);
     const newTestCode = generateTestCode();
 
-    const { data, error } = await supabase
+    const { data: newTest, error: testError } = await supabase
       .from('tests')
       .insert({
         user_id: user.id,
         test_code: newTestCode,
-        status: 'pending',
+        status: 'checking',
+        started_at: new Date().toISOString()
       })
       .select()
       .single();
 
-    if (error) {
+    if (testError) {
       toast.error('Failed to create test');
-      console.error(error);
-    } else {
-      setTestCode(newTestCode);
-      setCurrentTestId(data.id);
-      toast.success('Test created! Copy the code and include it in your email.');
+      console.error(testError);
+      setIsCreatingTest(false);
+      return;
     }
 
+    setTestCode(newTestCode);
+    setCurrentTestId(newTest.id);
+    toast.success('Test created and started! Checking inboxes...');
     setIsCreatingTest(false);
+    
+    // Navigate to test view immediately
+    navigate(`/test/${newTest.id}`);
   };
 
   const handleStartTest = async () => {

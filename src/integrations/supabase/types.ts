@@ -150,7 +150,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      calculate_deliverability_score: {
+        Args: { test_uuid: string }
+        Returns: number
+      }
     }
     Enums: {
       email_provider: "gmail" | "outlook" | "yahoo" | "protonmail" | "aol"
