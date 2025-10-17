@@ -51,23 +51,6 @@ Email Spam Report is a front-end application that enables users to submit and re
 
 Adjust the package manager commands (yarn / pnpm) if you prefer an alternative.
 
-## Project structure
-
-A typical layout:
-
-- public/                — Static assets
-- src/
-  - components/          — Reusable React components
-  - pages/               — Route-level components
-  - styles/              — Tailwind / CSS entrypoints
-  - utils/               — Shared utilities and helpers
-  - main.tsx             — App bootstrap
-- index.html
-- package.json
-- vite.config.ts
-
-(This is a suggested structure — adapt to your conventions as the project evolves.)
-
 ## Scripts
 
 Common scripts found in package.json (may vary):
